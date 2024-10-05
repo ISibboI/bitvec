@@ -682,7 +682,7 @@ where
 				self.drain.move_tail(len);
 			}
 			let filled = self.drain.fill(collected.by_ref());
-			debug_assert_eq!(filled, FillStatus::EmptyInput);
+			debug_assert_eq!(filled, FillStatus::FullSpan);
 			debug_assert_eq!(collected.len(), 0);
 		}
 	}
