@@ -540,8 +540,9 @@ where
 #[derive(Clone, Copy, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
 enum FillStatus {
 	/// The drain span is completely filled.
+	/// Note in this case, the replacement source may or may not be exhausted.
 	FullSpan   = 0,
-	/// The replacement source is completely exhausted.
+	/// The replacement source is completely exhausted, but the drain span is not filled yet.
 	EmptyInput = 1,
 }
 
